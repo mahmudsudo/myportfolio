@@ -7,8 +7,9 @@ function Header() {
         <nav id='nav-bar'>
                 <a href="home">Home</a>
                 <a href="#About">About</a>
-               <a href="#contact">contact me</a> 
+               <a href="#contact">Contact me</a> 
         </nav>
+        <hr />
     </header>
   )
 }
