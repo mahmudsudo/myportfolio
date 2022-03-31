@@ -1,19 +1,22 @@
-
-import Header from "./components/Header";
-import Showcase  from "./components/Showcase";
-import About from "./components/About"
+import { Route, Routes } from 'react-router-dom'
+import Home from './components/Home'
+import About from './components/About'
+import Contact from './components/Contact'
+import Layout from './components/Layout'
+import './App.scss'
 
 function App() {
-  let date = new Date();
-  console.log(date.getHours());
   return (
-    <section className="App">
-     <Header/>
-     <Showcase className="showcase"/>
-     <About />
-    </section>
-  );
-  
+    <>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Route>
+      </Routes>
+    </>
+  )
 }
 
-export default App;
+export default App
